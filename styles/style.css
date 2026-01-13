@@ -11,19 +11,12 @@
 
 body 
 {
-    background-image: url("../images/forsusoft_background.png");
     background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-
     margin: 0;
     font-family: "Roboto", sans-serif;
-
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
     line-height: 1.5;
 }
 
@@ -33,7 +26,39 @@ body::before {
     position: fixed;
     inset: 0;
     background: radial-gradient(circle at top, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
-    z-index: -1;
+    z-index: -2;
+}
+
+.page-home
+{
+    background-image: url("../images/forsusoft_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.page-projects
+{
+    background-image: url("../images/forsusoft_background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.page-about
+{
+    background-image: url("../images/forsusoft_background4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.page-contact
+{
+    background-image: url("../images/forsusoft_background4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
 
 .content-wrapper 
