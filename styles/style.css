@@ -1,5 +1,6 @@
 /* FONT */
-@font-face {
+@font-face 
+{
     font-family: 'ROG LyonsType Regular';
     font-size: normal;
     font-weight: normal;
@@ -8,108 +9,182 @@
 
 /* BODY SECTION */
 
-body
+body 
 {
     background-image: url("../images/forsusoft_background.png");
     background-color: black;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: top center;
+
     margin: 0;
-    font-weight: 400;
-    font-family: "ROG LyonsType Regular";
+    font-family: "Roboto", sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.5;
 }
 
-main
-{
+/* Dark overlay over background for whole content */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+    z-index: -1;
 }
 
-footer
+.content-wrapper 
 {
-    background-color: rgba(50,0,0,1.0);
-    margin-top: 780px;
-    padding-top: 64px;
-    padding-bottom: 64px;
-    font-size: 32px;
-    color: white;
+    flex: 1;
+    padding-top: 80px; /* navbar height */
 }
 
-footer label
+/* Navbar logo */
+.header-logo-img 
 {
-    margin-left: 150px;
-}
-
-/* HEADER SECTION */
-
-.header-container
-{
-    background-color: rgba(0,0,0,0.5);
-    height: 65px;
+    height: 40px;
     width: auto;
-    padding-top: 5px;
 }
 
-.header-container li
+/* Changes for bootstrap-Navbar */
+.navbar-dark .navbar-nav .nav-link 
 {
-    color: white;
-    list-style-type: none;
-    display: inline;
-    font-size: 22px;
+    font-size: 20px;
+    margin-left: 5px;
 }
 
-.header-container a
+.navbar,
+.navbar-brand,
+.navbar-nav, .nav-link
 {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 26px 10px 26px 10px;
+    font-family: "ROG LyonsType Regular", "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
-.header-container ul
+/* HERO SECTION */
+
+.hero-section
 {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 120px; /* чуть больше, чем высота navbar */
+    padding-bottom: 80px;
+    color: #ffffff;
 }
 
-.header-container a:visited
+.hero-title 
 {
-    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
 }
 
-.container-left
+.hero-subtitle 
 {
-    display: flex;
-    float: left;
+    font-size: 1.2rem;
+    max-width: 540px;
+    margin-bottom: 2rem;
 }
 
-.header-logo
+.hero-buttons .btn-primary 
 {
-    margin-left: 150px;
-    width: 140px;
+    background-color: #e04848;
+    border-color: #e04848;
 }
 
-.left-nav
+.hero-buttons .btn-primary:hover 
 {
-    display: block;
+    background-color: #ff5c5c;
+    border-color: #ff5c5c;
 }
 
-.right-nav
+/* NEWS SECTION */
+.news-section .card 
 {
-    display: block;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.container-right
+.news-section .card-title 
 {
-    display: flex;
-    float: right;
-    margin-right: 150px;
+    font-size: 1.05rem;
 }
 
-/* FOOTER SECTION */
-
-
-/* MEDIA SCREEN SECTION */
-
-@media screen and (max-width: 1223px) 
+.news-section .card-subtitle 
 {
-    
+    opacity: 0.8;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.news-section h2,
+.projects-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Light text with dark outline */
+
+.text-outline-dark 
+{
+    text-shadow:
+        0 0 4px rgba(0,0,0,0.8),
+        0 0 8px rgba(0,0,0,0.9);
+}
+
+/* Тёмный текст с светлой обводкой (если нужно на светлом фоне) */
+.text-outline-light 
+{
+    text-shadow:
+        0 0 4px rgba(255,255,255,0.8),
+        0 0 8px rgba(255,255,255,0.9);
+}
+
+.strong-outline 
+{
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+/* “Glass” cards for news/projects */
+.card.bg-dark.text-light {
+    background-color: rgba(0,0,0,0.65);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+}
+
+/* Navbar-refs */
+.navbar-dark .navbar-nav .nav-link {
+    transition: color 0.15s ease, text-shadow 0.15s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffb37a;
+    text-shadow: 0 0 6px rgba(255,179,122,0.7);
+}
+
+/* Cards */
+.card.bg-dark.text-light {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card.bg-dark.text-light:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.8);
 }

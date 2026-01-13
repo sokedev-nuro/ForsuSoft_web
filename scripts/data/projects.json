@@ -1,0 +1,18 @@
+[
+  {
+    "id": "puzzle-art",
+    "name": "Puzzle Art",
+    "status": "In development",
+    "platforms": ["PC & Mobile"],
+    "shortDescription": "Enjoyable Puzzle 2D game for mobile and pc (Godot C#).",
+    "featured": true
+  },
+  {
+    "id": "fps-template",
+    "name": "Immersive FPS Template",
+    "status": "Prototype",
+    "platforms": ["PC"],
+    "shortDescription": "Immersive first person shooter template with different mechanics from survival games (Godot C#).",
+    "featured": true
+  }
+]
