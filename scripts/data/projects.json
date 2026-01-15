@@ -1,18 +1,67 @@
 [
   {
     "id": "puzzle-art",
-    "name": "Puzzle Art",
+    "name": "Puzzle Art 2D",
     "status": "In development",
     "platforms": ["PC & Mobile"],
     "shortDescription": "Enjoyable Puzzle 2D game for mobile and pc (Godot C#).",
-    "featured": true
+    "featured": true,
+    "image": "images/projects/puzzle_art.png",
+    "steam-link": "https://www.forsusoft.com/projects",
+    "playmarket-link": "https://www.forsusoft.com/projects",
+    "appstore-link": ""
+  },
+  {
+    "id": "xtreme-defied",
+    "name": "Xtreme Defied 2D",
+    "status": "In development",
+    "platforms": ["PC & Mobile"],
+    "shortDescription": "2D moto-racing game, inspired from old Gravity Defied games. (Godot C#)",
+    "featured": true,
+    "image": "images/projects/xtreme_defied.png",
+    "steam-link": "https://www.forsusoft.com/projects",
+    "playmarket-link": "https://www.forsusoft.com/projects",
+    "appstore-link": ""
+  },
+  {
+    "id": "paperlands",
+    "name": "Paperlands 2D",
+    "status": "In development",
+    "platforms": ["PC & Mobile"],
+    "shortDescription": "Paper-style stylized 2D rogue-like game (Godot C#).",
+    "featured": true,
+    "image": "images/projects/paperlands.png",
+    "steam-link": "https://www.forsusoft.com/projects",
+    "playmarket-link": "https://www.forsusoft.com/projects",
+    "appstore-link": ""
+  },
+  {
+    "id": "midnigeist",
+    "name": "MidniGeist",
+    "status": "In development",
+    "platforms": ["PC & Mobile"],
+    "shortDescription": "Old-school stylized 3D racing game, inspired from old NFS series games (Godot C#).",
+    "featured": true,
+    "image": "images/projects/midnigeist.png",
+    "steam-link": "https://www.forsusoft.com/projects",
+    "playmarket-link": "https://www.forsusoft.com/projects"
   },
   {
     "id": "fps-template",
-    "name": "Immersive FPS Template",
+    "name": "Immersive FPS 3D Template",
     "status": "Prototype",
     "platforms": ["PC"],
     "shortDescription": "Immersive first person shooter template with different mechanics from survival games (Godot C#).",
-    "featured": true
+    "featured": true,
+    "image": ""
+  },
+  {
+    "id": "isometric-survival",
+    "name": "Isometric Survival 3D Template",
+    "status": "Prototype",
+    "platforms": ["PC"],
+    "shortDescription": "Isometric survival game template with deep-developed survival mechanics (Godot C#).",
+    "featured": true,
+    "image": ""
   }
 ]

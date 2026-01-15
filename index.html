@@ -55,11 +55,12 @@
     <!-- MAIN CONTENT -->
     <main class="content-wrapper">
 
+        <div class="mainpage-top-content">
         <!-- HERO (NON-STATIC TEXT) -->
         <section class="hero-section">
             <div class="container py-5">
                 <h1 class="text-white mb-3 text-outline-dark">ForsuSoft Studio</h1>
-                <p class="text-light">
+                <p class="text-light mb-3 text-outline-dark">
                     Independent studio focused on games, software and tools for developers.
                 </p>
             </div>
@@ -84,13 +85,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
+        </div>
 
+        <div class="content-separator">
+        </div>
+
+        <div class="mainpage-bottom-content">
         <!-- FEATURED PROJECTS -->
         <section class="projects-section py-5" v-if="featuredProjects.length">
             <div class="container">
-                <h2 class="text-white mb-4">Featured Projects</h2>
+                <h2 class="text-white text-outline-dark mb-4">Featured Projects</h2>
                 <div class="row g-4">
                     <div class="col-md-4" v-for="project in featuredProjects" :key="project.id">
                         <div class="card bg-dark text-light h-100">
@@ -110,6 +115,7 @@
                 </div>
             </div>
         </section>
+        </div>
         
     </main>
 
@@ -117,6 +123,8 @@
     <footer class="bg-dark text-light py-3 mt-auto">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center small">
             <span>© 2026 ForsuSoft</span>
+            <a class="nav-link-footer">Impressum</a>
+            <a class="nav-link-footer">Privacy Policy</a>
             <span>Game &amp; Software Development Studio</span>
         </div>
     </footer>
