@@ -92,7 +92,8 @@
                                         v-if="project['steam-link'] 
                                         || project['playmarket-link'] 
                                         || project['appstore-link'] 
-                                        || project['github-link']">
+                                        || project['github-link']
+                                        || project['itchio-link']">
                                         <a v-if="project['steam-link']" :href="project['steam-link']"
                                             class="btn btn-sm btn-outline-light me-2 p-1 d-inline-flex align-items-center justify-content-center"
                                             target="_blank" rel="noopener noreferrer">
@@ -116,6 +117,12 @@
                                             class="btn btn-sm btn-outline-primary p-1 d-inline-flex align-items-center justify-content-center"
                                             target="_blank" rel="noopener noreferrer">
                                             <img src="images/icons/github.svg" alt="GitHub" class="store-icon">
+                                        </a>
+
+                                        <a v-if="project['itchio-link']" :href="project['itchio-link']"
+                                            class="btn btn-sm btn-outline-primary p-1 d-inline-flex align-items-center justify-content-center"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <img src="images/icons/itchio.svg" alt="Itch" class="store-icon">
                                         </a>
                                     </div>
                                 </div>

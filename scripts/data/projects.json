@@ -64,7 +64,7 @@
     "shortDescription": "Isometric survival game template with deep-developed survival mechanics (Godot C#).",
     "featured": true,
     "image": "",
-    "github-link": "https://github.com/sokedev-nuro/IsometricSurvivalTemplate3D"
+    "itchio-link": "https://itch.io/"
   },
   {
     "id": "topdown-diablolike",
@@ -74,6 +74,16 @@
     "shortDescription": "Top-down diablolike template with deep-developed rpg mechanics (Godot C#).",
     "featured": true,
     "image": "",
-    "github-link": ""
+    "itchio-link": "https://itch.io/"
+  },
+  {
+    "id": "action-mmorpg-template",
+    "name": "Action MMORPG 3D Template",
+    "status": "Template",
+    "platforms": ["PC"],
+    "shortDescription": "Action MMORPG template with deep-developed rpg mechanics and non-target/target system (Godot C#).",
+    "featured": true,
+    "image": "",
+    "itchio-link": "https://itch.io/"
   }
 ]
