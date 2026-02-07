@@ -49,19 +49,31 @@
   {
     "id": "fps-template",
     "name": "Immersive FPS 3D Template",
-    "status": "Prototype",
+    "status": "Template",
     "platforms": ["PC"],
     "shortDescription": "Immersive first person shooter template with different mechanics from survival games (Godot C#).",
     "featured": true,
-    "image": ""
+    "image": "images/projects/fps-template.png",
+    "github-link": "https://github.com/sokedev-nuro/Test3DCSharp"
   },
   {
     "id": "isometric-survival",
     "name": "Isometric Survival 3D Template",
-    "status": "Prototype",
+    "status": "Template",
     "platforms": ["PC"],
     "shortDescription": "Isometric survival game template with deep-developed survival mechanics (Godot C#).",
     "featured": true,
-    "image": ""
+    "image": "",
+    "github-link": "https://github.com/sokedev-nuro/IsometricSurvivalTemplate3D"
+  },
+  {
+    "id": "topdown-diablolike",
+    "name": "Top-Down Diablo-like 3D Template",
+    "status": "Template",
+    "platforms": ["PC"],
+    "shortDescription": "Top-down diablolike template with deep-developed rpg mechanics (Godot C#).",
+    "featured": true,
+    "image": "",
+    "github-link": ""
   }
 ]
