@@ -113,6 +113,7 @@ body::before
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    background-attachment: fixed;
 }
 
 .page-about
@@ -121,6 +122,7 @@ body::before
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    background-attachment: fixed;
 }
 
 .page-contact
@@ -129,6 +131,7 @@ body::before
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    background-attachment: fixed;
 }
 
 /* Navbar logo */
@@ -324,4 +327,83 @@ body::before
     height: 40px;
     width: auto;
     display: block;
+}
+
+/* IMPRESSUM */
+
+.impressum-hero {
+    padding-top: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1.5rem;
+}
+
+.impressum-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(224, 72, 72, 0.4);
+}
+
+.impressum-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.75rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.75);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.impressum-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
+    border-color: rgba(224, 72, 72, 0.35);
+}
+
+.impressum-card-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(224, 72, 72, 0.15);
+    border: 1px solid rgba(224, 72, 72, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #e04848;
+    font-size: 1.15rem;
+}
+
+.impressum-card-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #e04848;
+    margin-bottom: 0.75rem;
+}
+
+.impressum-dl dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.1rem;
+}
+
+.impressum-dl dd {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0.6rem;
+}
+
+.impressum-dl dd a {
+    color: #ffb37a;
+    text-decoration: none;
+}
+
+.impressum-dl dd a:hover {
+    color: #ff5c5c;
+    text-decoration: underline;
 }
