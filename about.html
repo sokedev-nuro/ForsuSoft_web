@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="EN">
 
 <head>
@@ -7,24 +7,19 @@
     <meta name="description" content="Game development and Software development studio.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body class="page-about">
     <div id="app">
-        <!-- HEADER / NAVBAR -->
+
+        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -34,19 +29,17 @@
                     aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tools.html">TOOLS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs.html">DOCS</a></li>
                     </ul>
-
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" href="#">ABOUT</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-warning" href="donate.html">DONATE</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="donate.html">DONATE</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,6 +47,122 @@
 
         <!-- MAIN CONTENT -->
         <main class="content-wrapper">
+
+            <!-- HERO -->
+            <section class="about-hero">
+                <div class="container">
+                    <p class="about-hero-label">Who we are</p>
+                    <h1 class="about-hero-title">About <span class="about-hero-accent">Forsu Soft</span></h1>
+                    <p class="about-hero-sub">A small but passionate studio crafting games, software and websites.</p>
+                </div>
+            </section>
+
+            <!-- COMPANY CARD -->
+            <section class="about-section pb-4">
+                <div class="container">
+                    <div class="about-company-card">
+                        <div class="about-company-logo-col">
+                            <img src="images/forsusoft_logo.png" alt="ForsuSoft" class="about-company-logo">
+                            <div class="about-company-tags mt-3">
+                                <span class="about-tag">Game Dev</span>
+                                <span class="about-tag">Software Dev</span>
+                                <span class="about-tag">Web Dev</span>
+                                <span class="about-tag">Open Source</span>
+                            </div>
+                        </div>
+                        <div class="about-company-info">
+                            <h2 class="about-company-name">Forsu Soft</h2>
+                            <p class="about-company-desc">
+                                Forsu Soft is an independent game and software development studio focused on
+                                building high-quality experiences across platforms. From mobile games to
+                                desktop tools, we create products that are built to last.
+                            </p>
+                            <div class="about-company-meta">
+                                <div class="about-meta-item">
+                                    <i class="fa fa-calendar me-2"></i>
+                                    <span class="about-meta-label">Founded</span>
+                                    <span class="about-meta-value">20.02.2026</span>
+                                </div>
+                                <div class="about-meta-item">
+                                    <i class="fa fa-map-marker me-2"></i>
+                                    <span class="about-meta-label">Location</span>
+                                    <span class="about-meta-value">Germany, Saxony</span>
+                                </div>
+                                <div class="about-meta-item">
+                                    <i class="fa fa-code me-2"></i>
+                                    <span class="about-meta-label">Focus</span>
+                                    <span class="about-meta-value">Games &amp; Software &amp; Websites</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEAM -->
+            <section class="about-section py-4">
+                <div class="container">
+                    <div class="about-section-header mb-4">
+                        <h2 class="about-section-title">Team</h2>
+                        <div class="about-section-line"></div>
+                    </div>
+
+                    <div v-if="loading" class="text-center text-secondary py-5">
+                        <i class="fa fa-spinner fa-spin fa-2x"></i>
+                    </div>
+
+                    <div v-else-if="error" class="text-center py-5" style="color:#e04848">
+                        <i class="fa fa-exclamation-triangle me-2"></i>{{ error }}
+                    </div>
+
+                    <div v-else class="row g-4">
+                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3" v-for="member in team" :key="member.name">
+                            <div class="about-member-card">
+
+                                <!-- Photo -->
+                                <div class="about-member-photo-wrap">
+                                    <img v-if="member.photo" :src="member.photo" :alt="member.name"
+                                        class="about-member-photo">
+                                    <div v-else class="about-member-photo-placeholder">
+                                        <i class="fa fa-user fa-2x"></i>
+                                    </div>
+                                    <div class="about-member-photo-overlay"></div>
+                                </div>
+
+                                <!-- Info -->
+                                <div class="about-member-body">
+                                    <h3 class="about-member-name">{{ member.name }}</h3>
+                                    <p class="about-member-role">{{ member.role }}</p>
+                                    <p class="about-member-bio" v-if="member.bio">{{ member.bio }}</p>
+
+                                    <!-- Socials -->
+                                    <div class="about-member-socials" v-if="member.socials">
+                                        <a v-if="member.socials.github" :href="member.socials.github"
+                                            class="about-social-link" target="_blank" rel="noopener" title="GitHub">
+                                            <i class="fa fa-github"></i>
+                                        </a>
+                                        <a v-if="member.socials.linkedin" :href="member.socials.linkedin"
+                                            class="about-social-link" target="_blank" rel="noopener" title="LinkedIn">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                        <a v-if="member.socials.twitter" :href="member.socials.twitter"
+                                            class="about-social-link" target="_blank" rel="noopener"
+                                            title="Twitter / X">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a v-if="member.socials.website" :href="member.socials.website"
+                                            class="about-social-link" target="_blank" rel="noopener" title="Website">
+                                            <i class="fa fa-globe"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <!-- FOOTER -->
@@ -61,23 +170,21 @@
             <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center small">
                 <span>© 2026 ForsuSoft</span>
                 <a class="nav-link-footer" href="impressum.html">Impressum</a>
-                <a class="nav-link-footer" href="#">Privacy Policy</a>
+                <a class="nav-link-footer" href="datenschutz.html">Privacy Policy</a>
                 <span>Game &amp; Software Development Studio</span>
             </div>
         </footer>
-        
+
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
-    <!-- Vue 3 JS + OWN SCRIPTS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-    <script src="scripts/home-data.js"></script>
+    <script src="scripts/about-page.js"></script>
 </body>
 
 </html>

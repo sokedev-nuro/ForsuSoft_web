@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="EN">
 
 <head>
@@ -7,74 +7,117 @@
     <meta name="description" content="Game development and Software development studio.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body class="page-contact">
-<div id="app">
-    <!-- HEADER / NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="images/forsusoft_logo.png" alt="ForsuSoft logo" class="me-2 header-logo-img">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div id="app">
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
-                </ul>
-
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">CONTACT</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold text-warning" href="donate.html">DONATE</a>
-                    </li>
-                </ul>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/forsusoft_logo.png" alt="ForsuSoft logo" class="me-2 header-logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tools.html">TOOLS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs.html">DOCS</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">CONTACT</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="donate.html">DONATE</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="content-wrapper">
-    </main>
+        <!-- MAIN CONTENT -->
+        <main class="content-wrapper">
+            <div class="contact-page py-5">
+                <div class="container">
 
-    <!-- FOOTER -->
+                    <!-- Hero -->
+                    <div class="contact-hero mb-5">
+                        <p class="contact-hero-label">Get in touch</p>
+                        <h1 class="contact-hero-title">Contact <span class="contact-hero-accent">Us</span></h1>
+                        <p class="contact-hero-sub">Have a question or want to work together? Reach out through any of
+                            the contacts below.</p>
+                    </div>
+
+                    <!-- Loading -->
+                    <div v-if="loading" class="text-center text-secondary py-5">
+                        <i class="fa fa-spinner fa-spin fa-2x"></i>
+                    </div>
+
+                    <!-- Error -->
+                    <div v-else-if="error" class="text-center py-5" style="color:#e04848">
+                        <i class="fa fa-exclamation-triangle me-2"></i>{{ error }}
+                    </div>
+
+                    <!-- Cards -->
+                    <div v-else class="row g-4 justify-content-center">
+                        <div class="col-12 col-sm-6 col-lg-4" v-for="item in contacts" :key="item.id">
+                            <component :is="item.href ? 'a' : 'div'" :href="item.href || null"
+                                :target="item.href && !item.href.startsWith('mailto') && !item.href.startsWith('tel') ? '_blank' : null"
+                                :rel="item.href && !item.href.startsWith('mailto') && !item.href.startsWith('tel') ? 'noopener' : null"
+                                class="contact-card" :class="{ 'contact-card--link': !!item.href }">
+
+                                <div class="contact-card-icon">
+                                    <i :class="'fa ' + item.icon"></i>
+                                </div>
+
+                                <div class="contact-card-label">{{ item.label }}</div>
+                                <div class="contact-card-value">{{ item.value }}</div>
+                                <div class="contact-card-desc" v-if="item.description">
+                                    {{ item.description }}
+                                </div>
+
+                                <div class="contact-card-arrow" v-if="item.href">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+
+                            </component>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
         <footer class="bg-dark text-light py-3 mt-auto">
             <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center small">
                 <span>© 2026 ForsuSoft</span>
                 <a class="nav-link-footer" href="impressum.html">Impressum</a>
-                <a class="nav-link-footer" href="#">Privacy Policy</a>
+                <a class="nav-link-footer" href="datenschutz.html">Privacy Policy</a>
                 <span>Game &amp; Software Development Studio</span>
             </div>
         </footer>
-        
-</div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" 
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-<!-- Vue 3 JS + OWN SCRIPTS -->
-<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-<script src="scripts/home-data.js"></script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="scripts/contact-page.js"></script>
 </body>
+
 </html>

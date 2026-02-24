@@ -77,11 +77,11 @@
     "itchio-link": "https://itch.io/"
   },
   {
-    "id": "action-mmorpg-template",
-    "name": "Action MMORPG 3D Template",
+    "id": "rpg-template",
+    "name": "Action RPG 3D Template",
     "status": "Template",
     "platforms": ["PC"],
-    "shortDescription": "Action MMORPG template with deep-developed rpg mechanics and non-target/target system (Godot C#).",
+    "shortDescription": "Action RPG template with deep-developed rpg mechanics and non-target/target system (Godot C#).",
     "featured": true,
     "image": "",
     "itchio-link": "https://itch.io/"
