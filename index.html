@@ -33,7 +33,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tools.html">TOOLS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tools.html">TOOLS & TEMPLATES</a></li>
                         <li class="nav-item"><a class="nav-link" href="docs.html">DOCS</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -112,16 +112,19 @@
             </div>
 
             <!-- SEPARATOR -->
-            <div class="content-separator"></div>
+            <div class="content-separator">
+                <div class="container">
+                    <div class="home-section-header">
+                        <h2 class="home-section-title text-outline-dark">Featured Projects</h2>
+                        <div class="home-section-line"></div>
+                    </div>
+                </div>
+            </div>
 
             <!-- FEATURED PROJECTS -->
             <div class="mainpage-bottom-content">
                 <section class="projects-section py-5" v-if="!loading && featuredProjects.length">
                     <div class="container">
-                        <div class="home-section-header mb-4">
-                            <h2 class="home-section-title text-outline-dark">Featured Projects</h2>
-                            <div class="home-section-line"></div>
-                        </div>
                         <div class="row g-4">
                             <div class="col-md-4" v-for="project in featuredProjects" :key="project.id">
                                 <div class="card bg-dark text-light h-100 project-card"

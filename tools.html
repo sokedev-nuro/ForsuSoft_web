@@ -2,7 +2,7 @@
 <html lang="EN">
 
 <head>
-    <title>Forsu Soft | Main</title>
+    <title>Forsu Soft | Tools</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game development and Software development studio.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body class="page-tools">
@@ -37,9 +38,9 @@
 
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tools.html">TOOLS</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">TOOLS & TEMPLATES</a></li>
                         <li class="nav-item"><a class="nav-link" href="docs.html">DOCS</a></li>
                     </ul>
 
@@ -56,7 +57,121 @@
 
         <!-- MAIN CONTENT -->
         <main class="content-wrapper">
+            <section class="tools-section py-5">
+                <div class="container">
 
+                    <!-- Hero -->
+                    <div class="projects-hero mb-5">
+                        <p class="projects-hero-label">All Assets</p>
+                        <h1 class="projects-hero-title">Tools & Templates</h1>
+                        <p class="projects-hero-sub">
+                            Developer tools, utilities and templates made by ForsuSoft — free and paid assets.
+                        </p>
+                    </div>
+
+                    <!-- Loading -->
+                    <div v-if="loading" class="text-center text-secondary py-5">
+                        <i class="fa fa-spinner fa-spin fa-2x"></i>
+                    </div>
+
+                    <!-- Error -->
+                    <div v-else-if="error" class="text-center py-5" style="color:#e04848">
+                        <i class="fa fa-exclamation-triangle me-2"></i>{{ error }}
+                    </div>
+
+                    <template v-else>
+
+                        <!-- Category Filter -->
+                        <div class="d-flex flex-wrap gap-2 mb-4" v-if="categories.length > 1">
+                            <button v-for="cat in categories" :key="cat" class="btn btn-sm"
+                                :class="activeCategory === cat ? 'btn-danger' : 'btn-outline-secondary'"
+                                @click="activeCategory = cat">
+                                {{ cat }}
+                            </button>
+                        </div>
+
+                        <!-- Cards -->
+                        <div class="row g-4">
+                            <div class="col-md-4" v-for="tool in filteredTools" :key="tool.id">
+                                <div class="card bg-dark text-light h-100 tool-card">
+                                    <div class="card-body d-flex flex-column">
+
+                                        <!-- Icon + Name -->
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="tool-card-icon">
+                                                <i class="fa" :class="tool.icon || 'bi-wrench'"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">{{ tool.name }}</h5>
+                                        </div>
+
+                                        <!-- Badges -->
+                                        <div class="d-flex flex-wrap gap-2 mb-2">
+                                            <span class="badge tool-badge-category">{{ tool.category }}</span>
+                                            <span v-if="tool.free" class="badge bg-success">Free</span>
+                                            <span v-else class="badge bg-warning text-dark">Paid</span>
+                                            <span class="badge bg-secondary" v-if="tool.version">v{{ tool.version
+                                                }}</span>
+                                        </div>
+
+                                        <!-- Description -->
+                                        <p class="card-text flex-grow-1 mt-2 small">{{ tool.shortDescription }}</p>
+
+                                        <!-- Actions -->
+                                        <div class="d-flex flex-wrap align-items-center gap-2 mt-auto pt-3">
+
+                                            <!-- Free: download or soon -->
+                                            <template v-if="tool.free">
+                                                <a v-if="tool['download-link']" :href="tool['download-link']"
+                                                    class="btn btn-sm btn-danger" target="_blank"
+                                                    rel="noopener noreferrer">
+                                                    <i class="fa fa-download me-1"></i>Download
+                                                </a>
+                                                <span v-else class="btn btn-sm btn-outline-secondary disabled">
+                                                    <i class="fa fa-clock-o me-1"></i>Soon
+                                                </span>
+                                            </template>
+
+                                            <!-- Paid: buy (itchio / another link) or soon -->
+                                            <template v-else>
+                                                <a v-if="tool['buy-link']" :href="tool['buy-link']"
+                                                    class="btn btn-sm btn-warning text-dark fw-bold" target="_blank"
+                                                    rel="noopener noreferrer">
+                                                    <i class="fa fa-shopping-cart me-1"></i>Buy — {{ tool.price }}
+                                                </a>
+                                                <span v-else class="btn btn-sm btn-outline-secondary disabled">
+                                                    <i class="fa fa-clock-o me-1"></i>Soon
+                                                </span>
+                                            </template>
+
+                                            <!-- GitHub -->
+                                            <a v-if="tool['github-link']" :href="tool['github-link']"
+                                                class="btn btn-sm btn-outline-light p-1 d-inline-flex align-items-center justify-content-center"
+                                                target="_blank" rel="noopener noreferrer" title="GitHub">
+                                                <img src="images/icons/github.svg" alt="GitHub" class="store-icon">
+                                            </a>
+
+                                            <!-- Docs -->
+                                            <a v-if="tool['docs-link']" :href="tool['docs-link']"
+                                                class="btn btn-sm btn-outline-light" title="Documentation">
+                                                <i class="fa fa-book"></i>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Empty state -->
+                            <div v-if="filteredTools.length === 0" class="text-center text-secondary py-5">
+                                <i class="fa fa-inbox fa-2x mb-3"></i>
+                                <p>No tools in this category yet.</p>
+                            </div>
+                        </div>
+
+                    </template>
+                </div>
+            </section>
         </main>
 
         <!-- FOOTER -->
@@ -79,7 +194,7 @@
         crossorigin="anonymous"></script>
     <!-- Vue 3 JS + OWN SCRIPTS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-    <script src="scripts/home-data.js"></script>
+    <script src="scripts/tools-page.js"></script>
 </body>
 
 </html>

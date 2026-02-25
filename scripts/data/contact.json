@@ -11,8 +11,24 @@
     "id": 2,
     "icon": "fa-phone",
     "label": "Phone",
-    "value": "+49 000 000000",
+    "value": "+49 179 152 29 12",
     "description": "Available Mon-Fri, 9:00-18:00 CET.",
-    "href": "tel:+49000000000"
+    "href": "tel:+491791522912"
+  },
+  {
+    "id": 3,
+    "icon": "fa-telegram",
+    "label": "Telegram",
+    "value": "Forsu Soft Telegram",
+    "description": "Telegram Channel",
+    "href": "https://t.me/forsusoft"
+  },
+  {
+    "id": 4,
+    "icon": "fa-youtube",
+    "label": "YouTube",
+    "value": "Forsu Soft YouTube",
+    "description": "YouTube Channel",
+    "href": "https://www.youtube.com/@ForsuSoft"
   }
 ]
