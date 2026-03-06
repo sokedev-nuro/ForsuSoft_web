@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "icon": "fa-envelope",
+    "icon": "fa-solid fa-envelope",
     "label": "E-Mail",
     "value": "info@forsusoft.com",
     "description": "We usually respond within 1-2 business days.",
@@ -9,15 +9,15 @@
   },
   {
     "id": 2,
-    "icon": "fa-phone",
+    "icon": "fa-solid fa-phone",
     "label": "Phone",
-    "value": "+49 179 152 29 12",
+    "value": "+49 179 152 28 12",
     "description": "Available Mon-Fri, 9:00-18:00 CET.",
     "href": "tel:+491791522912"
   },
   {
     "id": 3,
-    "icon": "fa-telegram",
+    "icon": "fa-brands fa-telegram",
     "label": "Telegram",
     "value": "Forsu Soft Telegram",
     "description": "Telegram Channel",
@@ -25,10 +25,26 @@
   },
   {
     "id": 4,
-    "icon": "fa-youtube",
+    "icon": "fa-brands fa-youtube",
     "label": "YouTube",
     "value": "Forsu Soft YouTube",
     "description": "YouTube Channel",
     "href": "https://www.youtube.com/@ForsuSoft"
+  },
+  {
+    "id": 5,
+    "icon": "fa-brands fa-instagram",
+    "label": "Instagram",
+    "value": "Forsu Soft Instagram",
+    "description": "Instagram Account",
+    "href": "https://www.instagram.com/forsusoft"
+  },
+  {
+    "id": 6,
+    "icon": "fa-brands fa-tiktok",
+    "label": "TikTok",
+    "value": "Forsu Soft TikTok",
+    "description": "TikTok Account",
+    "href": "https://www.tiktok.com/@forsusoft"
   }
 ]
