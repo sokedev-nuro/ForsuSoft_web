@@ -13,7 +13,7 @@
     "label": "Phone",
     "value": "+49 179 152 28 12",
     "description": "Available Mon-Fri, 9:00-18:00 CET.",
-    "href": "tel:+491791522912"
+    "href": "tel:+491791522812"
   },
   {
     "id": 3,
@@ -46,5 +46,21 @@
     "value": "Forsu Soft TikTok",
     "description": "TikTok Account",
     "href": "https://www.tiktok.com/@forsusoft"
+  },
+  {
+    "id": 7,
+    "icon": "fa-brands fa-discord",
+    "label": "Discord",
+    "value": "Forsu Soft Discord",
+    "description": "Discord Server",
+    "href": "https://discord.gg/cdfCYwsQAR"
+  },
+  {
+    "id": 8,
+    "icon": "fa-brands fa-x-twitter",
+    "label": "Twitter X",
+    "value": "Forsu Soft Twitter X",
+    "description": "Twitter X Account",
+    "href": "https://x.com/ForsuSoft"
   }
 ]

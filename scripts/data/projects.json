@@ -71,7 +71,7 @@
     "name": "Top-Down Diablo-like 3D Template",
     "status": "Template",
     "platforms": ["PC"],
-    "shortDescription": "Top-down diablolike template with deep-developed rpg mechanics (Godot C#).",
+    "shortDescription": "Top-Down Diablo-like template with deep-developed rpg mechanics (Godot C#).",
     "featured": true,
     "image": "",
     "itchio-link": "https://itch.io/"
@@ -81,7 +81,17 @@
     "name": "Action RPG 3D Template",
     "status": "Template",
     "platforms": ["PC"],
-    "shortDescription": "Action RPG template with deep-developed rpg mechanics and non-target/target system (Godot C#).",
+    "shortDescription": "Action RPG template with deep-developed RPG mechanics and non-target/target system (Godot C#).",
+    "featured": true,
+    "image": "",
+    "itchio-link": "https://itch.io/"
+  },
+  {
+    "id": "procedural-rpg-template",
+    "name": "TPS-RPG Template with Procedural World",
+    "status": "Template",
+    "platforms": ["PC"],
+    "shortDescription": "Third-Person Shooter with deep-developed mechanics in terms of game design with procedurally generated world (Godot C#).",
     "featured": true,
     "image": "",
     "itchio-link": "https://itch.io/"
