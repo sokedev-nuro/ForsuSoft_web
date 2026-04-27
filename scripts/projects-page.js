@@ -13,7 +13,9 @@ createApp({
     return {
       projects: [],
       loading: true,
-      error: null
+      error: null,
+      selectedProject: null,
+      showModal: false
     };
   },
   async mounted() {
@@ -25,6 +27,17 @@ createApp({
       this.error = 'Failed to load projects';
     } finally {
       this.loading = false;
+    }
+  },
+  methods: {
+    openModal(project) {
+      this.selectedProject = project;
+      this.showModal = true;
+      document.body.style.overflow = 'hidden';
+    },
+    closeModal() {
+      this.showModal = false;
+      document.body.style.overflow = '';
     }
   }
 }).mount('#app');

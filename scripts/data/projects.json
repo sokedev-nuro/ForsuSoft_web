@@ -3,97 +3,168 @@
     "id": "puzzle-art",
     "name": "Puzzle Art 2D",
     "status": "In development",
-    "platforms": ["PC & Mobile"],
-    "shortDescription": "Enjoyable Puzzle 2D game for mobile and pc (Godot C#).",
+    "platforms": 
+    [
+      "Steam",
+      "Play Market",
+      "App Store"
+    ],
+    "shortDescription": "Enjoyable Puzzle 2D game for mobile and pc (Godot C#)",
     "featured": true,
     "image": "images/projects/puzzle_art.png",
-    "steam-link": "https://www.forsusoft.com/projects",
-    "playmarket-link": "https://www.forsusoft.com/projects",
-    "appstore-link": ""
+    "steam-link": "",
+    "playmarket-link": "",
+    "appstore-link": "",
+    "youtube-link": "https://www.youtube.com/watch?v=WPotvpSShpI&list=PLhIEX6yPKDCuCs3YWtIxC-joWTAvuyUez",
+    "roadmap": 
+    [
+      "Q3 2025: Core mechanics and prototype",
+      "Q4 2025: Puzzle design (30+ puzzles)",
+      "April 2026: UI polish, sound design and animations",
+      "May 2026: More puzzle modes implementation, and steam services. Beta testing and release on Steam",
+      "June 2026: Beta testing and release on Play Market"
+    ],
+    "progress": 
+    [
+      "Core puzzle mechanics implemented",
+      "Save/Load system integrated",
+      "Puzzle difficulties implemented",
+      "Main menu and settings screen done",
+      "30+ levels designed and playable"
+    ]
   },
   {
     "id": "xtreme-defied",
     "name": "Xtreme Defied 2D",
     "status": "In development",
-    "platforms": ["PC & Mobile"],
+    "platforms": [
+      "Steam",
+      "Play Market",
+      "App Store"
+    ],
     "shortDescription": "2D moto-racing game, inspired from old Gravity Defied games. (Godot C#)",
     "featured": true,
     "image": "images/projects/xtreme_defied.png",
-    "steam-link": "https://www.forsusoft.com/projects",
-    "playmarket-link": "https://www.forsusoft.com/projects",
-    "appstore-link": ""
+    "steam-link": "",
+    "playmarket-link": "",
+    "appstore-link": "",
+    "youtube-link": "https://www.youtube.com/watch?v=R9N57V8Fs_Q&list=PLhIEX6yPKDCvb8akiDUslKlGQStj-kkSm",
+    "roadmap": 
+    [
+      "Q1 2026: Core mechanics and prototype",
+      "Q2 2026: Level design (50+ levels)",
+      "Q3 2026: UI polish, sound design and animations. Steam services implementation. Beta testing and release on PC",
+      "Q4 2026: Beta testing and release on Play Market"
+    ],
+    "progress": 
+    [
+      "Core bike physics and mechanics implemented"
+    ]
+  },
+  {
+    "id": "rpg-template",
+    "name": "Action RPG 3D Template",
+    "status": "In development",
+    "platforms": 
+    [
+      "Godot Engine"
+    ],
+    "shortDescription": "Action RPG template with deep-developed RPG mechanics and non-target/target system (Godot C#)",
+    "featured": true,
+    "image": "images/projects/rpg-template.png",
+    "itchio-link": "",
+    "youtube-link": "https://www.youtube.com/watch?v=amiDBpieTNc&list=PLhIEX6yPKDCu_HEdm_apv6y2OpnloB7x-",
+    "roadmap": 
+    [
+      "Q1 2026: Core mechanics: third-person controller, inventory, equipment",
+      "Q2 2026: Combat animations, interaction system, combat system and AI",
+      "Q3 2026: Core RPG mechanics: trade, loot, different AI fractions, etc.",
+      "Q4 2026: Beta testing and release on itch.io platform"
+    ],
+    "progress":
+    [
+      "Implemented third-person controller",
+      "Implemented player equipment and player inventory",
+      "Added basic idle, sheathe and draw animations for each weapon type."
+    ]
   },
   {
     "id": "paperlands",
     "name": "Paperlands 2D",
-    "status": "In development",
-    "platforms": ["PC & Mobile"],
-    "shortDescription": "Paper-style stylized 2D rogue-like game (Godot C#).",
-    "featured": true,
+    "status": "Not in development",
+    "platforms": [
+      "Steam",
+      "Play Market",
+      "App Store"
+    ],
+    "shortDescription": "Paper-style stylized 2D rogue-like game (Godot C#)",
+    "featured": false,
     "image": "images/projects/paperlands.png",
-    "steam-link": "https://www.forsusoft.com/projects",
-    "playmarket-link": "https://www.forsusoft.com/projects",
+    "steam-link": "",
+    "playmarket-link": "",
     "appstore-link": ""
   },
   {
     "id": "midnigeist",
     "name": "MidniGeist",
-    "status": "In development",
-    "platforms": ["PC & Mobile"],
-    "shortDescription": "Old-school stylized 3D racing game, inspired from old NFS series games (Godot C#).",
-    "featured": true,
+    "status": "Not in development",
+    "platforms": [
+      "Steam",
+      "Play Market",
+      "App Store"
+    ],
+    "shortDescription": "Old-school stylized 3D racing game, inspired from old NFS series games (Godot C#)",
+    "featured": false,
     "image": "images/projects/midnigeist.png",
-    "steam-link": "https://www.forsusoft.com/projects",
-    "playmarket-link": "https://www.forsusoft.com/projects"
+    "steam-link": "",
+    "playmarket-link": ""
   },
   {
     "id": "fps-template",
     "name": "Immersive FPS 3D Template",
-    "status": "Template",
-    "platforms": ["PC"],
-    "shortDescription": "Immersive first person shooter template with different mechanics from survival games (Godot C#).",
+    "status": "Not in development",
+    "platforms": [
+      "Godot Engine"
+    ],
+    "shortDescription": "Immersive first person shooter template with different mechanics from survival games (Godot C#)",
     "featured": true,
     "image": "images/projects/fps-template.png",
-    "github-link": "https://github.com/sokedev-nuro/Test3DCSharp"
+    "itchio-link": ""
   },
   {
     "id": "isometric-survival",
     "name": "Isometric Survival 3D Template",
-    "status": "Template",
-    "platforms": ["PC"],
-    "shortDescription": "Isometric survival game template with deep-developed survival mechanics (Godot C#).",
-    "featured": true,
+    "status": "Not in development",
+    "platforms": [
+      "Godot Engine"
+    ],
+    "shortDescription": "Isometric survival game template with deep-developed survival mechanics (Godot C#)",
+    "featured": false,
     "image": "",
-    "itchio-link": "https://itch.io/"
+    "itchio-link": ""
   },
   {
     "id": "topdown-diablolike",
     "name": "Top-Down Diablo-like 3D Template",
-    "status": "Template",
-    "platforms": ["PC"],
-    "shortDescription": "Top-Down Diablo-like template with deep-developed rpg mechanics (Godot C#).",
-    "featured": true,
+    "status": "Not in development",
+    "platforms": [
+      "Godot Engine"
+    ],
+    "shortDescription": "Top-Down Diablo-like template with deep-developed rpg mechanics (Godot C#)",
+    "featured": false,
     "image": "",
-    "itchio-link": "https://itch.io/"
-  },
-  {
-    "id": "rpg-template",
-    "name": "Action RPG 3D Template",
-    "status": "Template",
-    "platforms": ["PC"],
-    "shortDescription": "Action RPG template with deep-developed RPG mechanics and non-target/target system (Godot C#).",
-    "featured": true,
-    "image": "",
-    "itchio-link": "https://itch.io/"
+    "itchio-link": ""
   },
   {
     "id": "procedural-rpg-template",
     "name": "TPS-RPG Template with Procedural World",
-    "status": "Template",
-    "platforms": ["PC"],
-    "shortDescription": "Third-Person Shooter with deep-developed mechanics in terms of game design with procedurally generated world (Godot C#).",
-    "featured": true,
+    "status": "Not in development",
+    "platforms": [
+      "Godot Engine"
+    ],
+    "shortDescription": "Third-Person Shooter with deep-developed mechanics in terms of game design with procedurally generated world (Godot C#)",
+    "featured": false,
     "image": "",
-    "itchio-link": "https://itch.io/"
+    "itchio-link": ""
   }
 ]

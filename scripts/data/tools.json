@@ -1,4 +1,16 @@
 [
+    {
+    "id": "service-locator-godot",
+    "name": "Service Locator (Godot C#)",
+    "category": "Godot Scripts",
+    "version": "1.0",
+    "shortDescription": "Service locator pattern, that provides more comfortable access to data in order to better organize scenes, instead of using Singletons. For mid-scale Godot projects.",
+    "icon": "bi-code-square",
+    "free": true,
+    "download-link": "https://github.com/sokedev-nuro/Service-Locator-Godot/releases/tag/Release",
+    "github-link": "https://github.com/sokedev-nuro/Service-Locator-Godot",
+    "docs-link": "https://github.com/sokedev-nuro/Service-Locator-Godot"
+  },
   {
     "id": "godot-save-system",
     "name": "Mixamo Bone Renamer",
@@ -7,31 +19,6 @@
     "shortDescription": "Blender plugin, that deals with mixamo bones renaming to the normal format.",
     "icon": "bi-badge-3d",
     "free": true,
-    "download-link": "",
-    "github-link": "",
-    "docs-link": ""
-  },
-  {
-    "id": "service-locator-godot",
-    "name": "Service Locator (Godot C#)",
-    "category": "Godot Scripts",
-    "version": "1.0.0",
-    "shortDescription": "Service locator pattern, that provides more comfortable access to data in order to better organize scenes, instead of using Singletons. For mid-scale Godot projects.",
-    "icon": "bi-code-square",
-    "free": true,
-    "download-link": "",
-    "github-link": "",
-    "docs-link": ""
-  },
-  {
-    "id": "dependency-injection-godot",
-    "name": "Dependency Injection (Godot C#)",
-    "category": "Godot Scripts",
-    "version": "1.0.0",
-    "shortDescription": "Dependency Injection System, that facilitates object creation, dependency management, and binding using various objects (singleton, instance, etc.). With this system, you can manage your dependencies more efficiently, especially for large-scale Godot projects. ",
-    "icon": "bi-code-square",
-    "free": false,
-    "price": "",
     "download-link": "",
     "github-link": "",
     "docs-link": ""

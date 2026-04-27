@@ -53,7 +53,7 @@
                     <!-- Hero -->
                     <div class="projects-hero mb-5">
                         <p class="projects-hero-label">Portfolio</p>
-                        <h1 class="projects-hero-title">Our Projects</h1>
+                        <h1 class="projects-hero-title">Forsu Projects</h1>
                         <p class="projects-hero-sub">Games and templates currently in development at ForsuSoft.</p>
                     </div>
 
@@ -70,9 +70,10 @@
                     <!-- Cards -->
                     <div v-else class="row g-4">
                         <div class="col-md-4" v-for="project in projects" :key="project.id">
-                            <div class="card bg-dark text-light h-100 project-card"
+                            <div class="card bg-dark text-light h-100 project-card shadow-sm"
                                 :class="{ 'project-card--with-image': project.image }"
-                                :style="project.image ? { backgroundImage: `url(${project.image})` } : null">
+                                :style="project.image ? { backgroundImage: `url(${project.image})` } : null"
+                                @click="openModal(project)" style="cursor: pointer; transition: transform 0.2s;">
                                 <div class="card-body d-flex flex-column project-card-body">
 
                                     <h5 class="card-title mb-1">{{ project.name }}</h5>
@@ -92,11 +93,12 @@
                                     </div>
 
                                     <!-- Store / platform links -->
-                                    <div class="d-flex flex-wrap gap-2 mt-auto" v-if="project['steam-link']
+                                    <div class="d-flex flex-wrap gap-2 mt-auto" @click.stop v-if="project['steam-link']
                                            || project['playmarket-link']
                                            || project['appstore-link']
                                            || project['github-link']
-                                           || project['itchio-link']">
+                                           || project['itchio-link']
+                                           || project['youtube-link']">
 
                                         <a v-if="project['steam-link']" :href="project['steam-link']"
                                             class="btn btn-sm btn-outline-light p-1 d-inline-flex align-items-center justify-content-center"
@@ -129,6 +131,13 @@
                                             <img src="images/icons/itchio.svg" alt="Itch.io" class="store-icon">
                                         </a>
 
+                                        <a v-if="project['youtube-link']" :href="project['youtube-link']"
+                                            class="btn btn-sm btn-outline-danger p-1 d-inline-flex align-items-center justify-content-center"
+                                            target="_blank" rel="noopener noreferrer" title="YouTube Playlist">
+                                            <i class="fab fa-youtube"
+                                                style="font-size: 1.1rem; width: 35px; height: 24px; display: flex; align-items: center; justify-content: center;"></i>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
@@ -154,6 +163,73 @@
                 <span>Game &amp; Software Development Studio</span>
             </div>
         </footer>
+
+        <!-- Project Details Modal -->
+        <Teleport to="body">
+            <template v-if="showModal">
+                <div class="modal-backdrop fade show" @click="closeModal"></div>
+                <div class="modal d-block" tabindex="-1" style="z-index: 1055;">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content bg-dark text-light">
+
+                            <div class="modal-header border-secondary">
+                                <h5 class="modal-title">{{ selectedProject.name }}</h5>
+                                <button type="button" class="btn-close btn-close-white" @click="closeModal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <img v-if="selectedProject.image" :src="selectedProject.image"
+                                    class="img-fluid rounded mb-4 w-100" style="max-height: 350px; object-fit: cover;"
+                                    alt="Project Cover">
+
+                                <h6 class="text-warning mb-2">
+                                    {{ selectedProject.status }}
+                                    <span v-if="selectedProject.platforms && selectedProject.platforms.length">
+                                        · {{ selectedProject.platforms.join(', ') }}
+                                    </span>
+                                </h6>
+                                <p class="mb-4">{{ selectedProject.shortDescription }}</p>
+
+                                <hr class="border-secondary">
+
+                                <div class="row mt-4">
+                                    <!-- Roadmap -->
+                                    <div class="col-md-6 mb-3">
+                                        <h5 class="text-info"><i class="fas fa-map-signs me-2"></i>Roadmap</h5>
+                                        <ul v-if="selectedProject.roadmap && selectedProject.roadmap.length"
+                                            class="text-secondary small mt-3">
+                                            <li v-for="(item, index) in selectedProject.roadmap" :key="index"
+                                                class="mb-2">
+                                                {{ item }}</li>
+                                        </ul>
+                                        <p v-else class="text-muted small mt-3">Roadmap is not available yet.</p>
+                                    </div>
+
+                                    <!-- Progress -->
+                                    <div class="col-md-6 mb-3">
+                                        <h5 class="text-success"><i class="fas fa-tasks me-2"></i>Current Progress</h5>
+                                        <ul v-if="selectedProject.progress && selectedProject.progress.length"
+                                            class="text-secondary small mt-3">
+                                            <li v-for="(item, index) in selectedProject.progress" :key="index"
+                                                class="mb-2">
+                                                <i class="fas fa-check text-success me-2"></i>{{ item }}
+                                            </li>
+                                        </ul>
+                                        <p v-else class="text-muted small mt-3">Progress details are updating...</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer border-secondary">
+                                <button type="button" class="btn btn-secondary" @click="closeModal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </Teleport>
 
     </div>
 
