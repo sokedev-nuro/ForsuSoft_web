@@ -15,7 +15,7 @@
     "steam-link": "https://store.steampowered.com/app/4516050/Puzzle_Art/",
     "playmarket-link": "",
     "appstore-link": "",
-    "youtube-link": "https://www.youtube.com/watch?v=WPotvpSShpI&list=PLhIEX6yPKDCuCs3YWtIxC-joWTAvuyUez",
+    "youtube-link": "https://www.youtube.com/playlist?list=PLhIEX6yPKDCuCs3YWtIxC-joWTAvuyUez",
     "roadmap": 
     [
       "Q3 2025: Core mechanics and prototype",
@@ -43,6 +43,7 @@
     "shortDescription": "First-person shooter framework with different mechanics from survival games (Godot C#)",
     "featured": true,
     "image": "images/projects/fps-framework.png",
+    "youtube-link": "https://www.youtube.com/playlist?list=PLMtAhSnSc-58",
     "itchio-link": "",
     "roadmap": 
     [
@@ -68,7 +69,7 @@
     "steam-link": "",
     "playmarket-link": "",
     "appstore-link": "",
-    "youtube-link": "https://www.youtube.com/watch?v=R9N57V8Fs_Q&list=PLhIEX6yPKDCvb8akiDUslKlGQStj-kkSm",
+    "youtube-link": "https://www.youtube.com/playlist?list=PLhIEX6yPKDCvb8akiDUslKlGQStj-kkSm",
     "roadmap": 
     [
       "Q1 2026: Core mechanics and prototype",
@@ -116,7 +117,7 @@
     "featured": true,
     "image": "images/projects/rpg-template.png",
     "itchio-link": "",
-    "youtube-link": "https://www.youtube.com/watch?v=amiDBpieTNc&list=PLhIEX6yPKDCu_HEdm_apv6y2OpnloB7x-",
+    "youtube-link": "https://www.youtube.com/playlist?list=PLhIEX6yPKDCu_HEdm_apv6y2OpnloB7x-",
     "roadmap": 
     [
       "Q1 2026: Core mechanics: third-person controller, inventory, equipment",
