@@ -1,5 +1,19 @@
 [
     {
+        "id": 0,
+        "date": "23.06.2026",
+        "title": "Puzzle Art has been officially released on Steam!",
+        "summary": "You can buy it right now in Steam by using this link down below.",
+        "link": "https://store.steampowered.com/app/4516050/Puzzle_Art/"
+    },
+    {
+        "id": 0,
+        "date": "16.05.2026",
+        "title": "Puzzle Art has been finally approved by Steam!",
+        "summary": "You can click *WISHLIST* button to add it to wishlists and follow it on Steam.",
+        "link": "https://store.steampowered.com/app/4516050/Puzzle_Art/"
+    },
+    {
         "id": 1,
         "date": "16.04.2026",
         "title": "Service Locator Addon (v1.0) | Godot C# | Release",

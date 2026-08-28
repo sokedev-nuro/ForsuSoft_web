@@ -12,7 +12,7 @@
     "shortDescription": "Enjoyable Puzzle 2D game for mobile and pc (Godot C#)",
     "featured": true,
     "image": "images/projects/puzzle_art.png",
-    "steam-link": "",
+    "steam-link": "https://store.steampowered.com/app/4516050/Puzzle_Art/",
     "playmarket-link": "",
     "appstore-link": "",
     "youtube-link": "https://www.youtube.com/watch?v=WPotvpSShpI&list=PLhIEX6yPKDCuCs3YWtIxC-joWTAvuyUez",
@@ -21,8 +21,8 @@
       "Q3 2025: Core mechanics and prototype",
       "Q4 2025: Puzzle design (30+ puzzles)",
       "April 2026: UI polish, sound design and animations",
-      "May 2026: More puzzle modes implementation, and steam services. Beta testing and release on Steam",
-      "June 2026: Beta testing and release on Play Market"
+      "June 2026: More puzzle modes implementation, and steam services. Beta testing and release on Steam",
+      "July-August 2026: Beta testing and release on Play Market"
     ],
     "progress": 
     [
@@ -31,6 +31,26 @@
       "Puzzle difficulties implemented",
       "Main menu and settings screen done",
       "30+ levels designed and playable"
+    ]
+  },
+  {
+    "id": "forsu-fps-framework",
+    "name": "Forsu FPS Framework",
+    "status": "In development",
+    "platforms": [
+      "Godot Engine"
+    ],
+    "shortDescription": "First-person shooter framework with different mechanics from survival games (Godot C#)",
+    "featured": true,
+    "image": "images/projects/fps-framework.png",
+    "itchio-link": "",
+    "roadmap": 
+    [
+      "In process"
+    ],
+    "progress": 
+    [
+      "In process"
     ]
   },
   {
@@ -60,6 +80,29 @@
     [
       "Core bike physics and mechanics implemented"
     ]
+  },
+  {
+    "id": "toxicity",
+    "name": "Toxicity",
+    "status": "In development",
+    "platforms": 
+    [
+      "Steam",
+      "Play Market"
+    ],
+    "shortDescription": "Rogue-like extraction card game in dystopia setting.",
+    "featured": true,
+    "image": "images/projects/toxicity.png",
+    "itchio-link": "",
+    "youtube-link": "",
+    "roadmap": 
+    [
+      "2026: Concept planning and template development"
+    ],
+    "progress":
+    [
+      "NULL"
+    ] 
   },
   {
     "id": "rpg-template",
@@ -118,18 +161,6 @@
     "image": "images/projects/midnigeist.png",
     "steam-link": "",
     "playmarket-link": ""
-  },
-  {
-    "id": "fps-template",
-    "name": "Immersive FPS 3D Template",
-    "status": "Not in development",
-    "platforms": [
-      "Godot Engine"
-    ],
-    "shortDescription": "Immersive first person shooter template with different mechanics from survival games (Godot C#)",
-    "featured": true,
-    "image": "images/projects/fps-template.png",
-    "itchio-link": ""
   },
   {
     "id": "isometric-survival",

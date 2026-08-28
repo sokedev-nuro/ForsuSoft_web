@@ -25,10 +25,10 @@
   },
   {
     "id": "immersive-fps-template",
-    "name": "Immersive First Person Shooter Template (Godot C#)",
+    "name": "Forsu FPS Framework (Godot C#)",
     "category": "Godot Template",
     "version": "1.0.0",
-    "shortDescription": "Immersive first person shooter template with different mechanics from survival games (Godot C#).",
+    "shortDescription": "Immersive FPS framework with different mechanics from survival games (Godot C#).",
     "icon": "bi-code-square",
     "free": false,
     "price": "",
